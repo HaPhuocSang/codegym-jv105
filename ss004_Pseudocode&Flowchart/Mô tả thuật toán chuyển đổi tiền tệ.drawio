@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="bcUSKi9ep5cmsYzfNh1U">
+    <mxGraphModel dx="1212" dy="620" grid="1" gridSize="15" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" value="Begin" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=15;" value="Input USD" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-3" edge="1" parent="1" source="osSYcbL9Nsjag8xVTu7w-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="osSYcbL9Nsjag8xVTu7w-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="VNĐ= USD*23000" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-5" edge="1" parent="1" source="osSYcbL9Nsjag8xVTu7w-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="osSYcbL9Nsjag8xVTu7w-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-6" edge="1" parent="1" source="osSYcbL9Nsjag8xVTu7w-4" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="400" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-7" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=15;" value="Display VNĐ" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-8" edge="1" parent="1" source="osSYcbL9Nsjag8xVTu7w-7" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="470" as="sourcePoint" />
+            <mxPoint x="400" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="osSYcbL9Nsjag8xVTu7w-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" value="End" vertex="1">
+          <mxGeometry height="60" width="125" x="340" y="465" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
