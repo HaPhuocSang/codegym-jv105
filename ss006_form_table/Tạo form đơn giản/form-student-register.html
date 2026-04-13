@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student register</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="student-register">
+        <form action="/action_page.php">
+            <table>
+                <tr>
+                    <th colspan="2">Đăng ký học viên</th>
+                </tr>
+                <tr>
+                    <td class="title">Họ và tên</td>
+                    <td><label><input type="text"></label></td>
+                </tr>
+                <tr>
+                    <td class="title">Ngày sinh</td>
+                    <td><label><input type="text" size="15"></label></td>
+                </tr>
+                <tr>
+                    <td class="title">Giới tính</td>
+                    <td>
+                        <label><input name="gender" type="radio">Nam</label>
+                        <label><input name="gender" type="radio">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">Địa chỉ</td>
+                    <td><textarea></textarea></td>
+                </tr>
+                <tr>
+                    <td class="title">Lớp</td>
+                    <td>
+                        <label>
+                            <select name="class">
+                                <option>-Chọn lớp-</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">Email</td>
+                    <td>
+                        <label><input type="email"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">Số điện thoại</td>
+                    <td>
+                        <label><input type="text"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Đăng ký</button>
+                        <button type="reset">Nhập lại</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

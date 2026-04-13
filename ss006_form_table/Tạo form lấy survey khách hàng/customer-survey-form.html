@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="customer-survey-form.css">
+    <title>Customer survey form</title>
+</head>
+<body>
+    <h2>Market Research Survey</h2>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+    <form method="post" action="/action_page.php">
+        <p><b>What is your age range?</b></p>
+        <label for="age">
+            <select name="age" id="age">
+                <option value="18-24">18-24</option>
+                <option value="25-30">25-35</option>
+            </select>
+        </label>
+        <p><b>What is your yearly income range?</b></p>
+        <label for="income">
+            <select name="income" id="income">
+                <option value="0-25,000">$0 - $25,000</option>
+                <option value="25,000-35,000">$25,000 - $35,000</option>
+            </select>
+        </label>
+        <p><b>Gender</b></p>
+        <label for="male"><input name="gender" id="male" type="radio">Male</label><br>
+        <label for="female"><input name="gender" id="female" type="radio">Female</label><br>
+        <p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.?</b></p>
+        <label for="product1"><input name="product1" id="product1" type="checkbox"> Product 1</label><br>
+        <label for="product2"><input name="product2" id="product2" type="checkbox"> Product 2</label><br>
+        <label for="product3"><input name="product3" id="product3" type="checkbox"> Product 3</label><br>
+        <p><b>How often would you use our new product?</b></p>
+        <label for="frequency1"><input name="frequency" id="frequency1" type="radio"> Daily</label><br>
+        <label for="frequency2"><input name="frequency" id="frequency2" type="radio"> Weekly</label><br>
+        <label for="frequency3"><input name="frequency" id="frequency3" type="radio"> Monthly</label><br>
+        <p><b>What would you pay for new product?</b></p>
+        <div class="all-input">
+            <span class="symbol">$</span>
+            <div class="first-input">
+                <label for="dollar"><input type="number" class="input-dollar" id="dollar" min="0"></label>
+                <span>Dollar</span>
+            </div>
+            <span class="dot">.</span>
+            <div class="second-input">
+                <label for="cent"><input type="number" class="input-cent" id="cent" min="0"></label>
+                <span>Cent</span>
+            </div>
+        </div>
+        <p><b>What features would you like to see in the new product.</b></p>
+        <label><textarea></textarea></label>
+        <p><b>Please rate your level of agreement with the following statements.</b></p>
+        <table>
+            <tr class="first-row">
+                <th class="coll-1"></th>
+                <th class="coll-2">Strongly Disagree</th>
+                <th class="coll-2">Disagree</th>
+                <th class="coll-2">Agree</th>
+                <th class="coll-2">Strongly Agree</th>
+            </tr>
+            <tr>
+                <td class="coll-1">Our products are priced fairly.</td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-1" type="radio"></label>
+                        <span>1</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-1" type="radio"></label>
+                        <span>2</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-1" type="radio"></label>
+                        <span>3</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-1" type="radio"></label>
+                        <span>4</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="second-row">
+                <td class="coll-1">Our products are high quality.</td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-2" type="radio"></label>
+                        <span>1</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-2" type="radio"></label>
+                        <span>2</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-2" type="radio"></label>
+                        <span>3</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-2" type="radio"></label>
+                        <span>4</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="coll-1">You would recommend our product to a friend or coworker.</td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-3" type="radio"></label>
+                        <span>1</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-3" type="radio"></label>
+                        <span>2</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-3" type="radio"></label>
+                        <span>3</span>
+                    </div>
+                </td>
+                <td class="coll-2">
+                    <div class="statement-checkbox">
+                        <label><input name="statement-3" type="radio"></label>
+                        <span>4</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+</html>

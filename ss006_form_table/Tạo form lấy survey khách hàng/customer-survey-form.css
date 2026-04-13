@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+select{
+    width: 300px;
+    background-color: #999999;
+}
+.all-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.symbol{
+    font-size: 20px;
+    margin: 0 5px 20px 5px;
+}
+.first-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.dot{
+    font-size: 20px;
+    margin: 0 5px 20px 5px;
+}
+.second-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-dollar{
+    width: 100px;
+}
+.input-cent{
+    width: 20px;
+}
+textarea{
+    width: 80%;
+    height: 100px;
+}
+table{
+    width: 80%;
+    height: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.coll-1{
+    width: 40%;
+}
+.coll-2{
+    width: 10%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.first-row{
+    background-color: gray;
+}
+.second-row{
+    background-color: #999999;
+}
+.statement-checkbox{
+    display: flex;
+    flex-direction: column;
+}
