@@ -1,11 +1,12 @@
-body{
+body {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,57 +14,70 @@ body{
     width: 80%;
     height: auto;
 }
-h1{
+
+h1 {
     text-align: center;
     color: blue;
 }
-table{
+
+table {
     width: 700px;
     height: 350px;
     border: 1px solid white;
     border-collapse: collapse;
 }
-th, td{
+
+th, td {
     width: 100px;
     height: 50px;
     text-align: center;
     border: 2px solid black;
     border-collapse: collapse;
 }
-.first-row th{
+
+.first-row th {
     border: 2px solid white;
     border-collapse: collapse;
 }
-.second-row td{
+
+.second-row td {
     border: 2px solid white;
     border-collapse: collapse;
     border-bottom: 2px solid lightseagreen;
 }
-.first-col-start{
+
+.first-col-start {
     background-color: red;
     color: white;
 }
-.first-col-end{
+
+.first-col-end {
     background-color: blue;
     color: white;
 }
-.first-col-beside{
+
+.first-col-beside {
     background-color: chartreuse;
     color: white;
 }
-.first-chill{
+
+.first-chill {
     color: red;
 }
-.last-chill{
+
+.last-chill {
     color: blue;
 }
-.third-col td{
+
+.third-col td {
     border: 2px solid lightseagreen;
     border-collapse: collapse;
 }
-.first-chill sub{
+
+.first-chill sub {
     color: black;
 }
-.last-chill sub{
+
+.last-chill sub {
     color: black;
 }

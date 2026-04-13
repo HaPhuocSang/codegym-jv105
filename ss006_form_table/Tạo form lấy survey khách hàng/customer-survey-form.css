@@ -1,70 +1,86 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
-select{
+
+select {
     width: 300px;
     background-color: #999999;
 }
-.all-input{
+
+.all-input {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.symbol{
+
+.symbol {
     font-size: 20px;
     margin: 0 5px 20px 5px;
 }
-.first-input{
+
+.first-input {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.dot{
+
+.dot {
     font-size: 20px;
     margin: 0 5px 20px 5px;
 }
-.second-input{
+
+.second-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.input-dollar{
+
+.input-dollar {
     width: 100px;
 }
-.input-cent{
+
+.input-cent {
     width: 20px;
 }
-textarea{
+
+textarea {
     width: 80%;
     height: 100px;
 }
-table{
+
+table {
     width: 80%;
     height: auto;
     border: 1px solid black;
     border-collapse: collapse;
 }
-th, td{
+
+th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
-.coll-1{
+
+.coll-1 {
     width: 40%;
 }
-.coll-2{
+
+.coll-2 {
     width: 10%;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.first-row{
+
+.first-row {
     background-color: gray;
 }
-.second-row{
+
+.second-row {
     background-color: #999999;
 }
-.statement-checkbox{
+
+.statement-checkbox {
     display: flex;
     flex-direction: column;
 }
