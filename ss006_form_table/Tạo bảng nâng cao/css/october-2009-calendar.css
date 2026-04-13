@@ -51,25 +51,19 @@ th, td{
     background-color: chartreuse;
     color: white;
 }
-.second-col-start{
+.first-chill{
     color: red;
 }
-.second-col-end{
+.last-chill{
     color: blue;
 }
 .third-col td{
     border: 2px solid lightseagreen;
     border-collapse: collapse;
 }
-.third-col-start{
-    color: red;
-}
-.third-col-start sub{
+.first-chill sub{
     color: black;
 }
-.third-col-end{
-    color: blue;
-}
-.third-col-end sub{
+.last-chill sub{
     color: black;
 }

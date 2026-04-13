@@ -5,22 +5,29 @@
     <title>Register</title>
 </head>
 <body>
-    <h1>Mô tả</h1>
-    <form method="post" action="/action_page.php">
+<h1>Mô tả</h1>
+<form method="post" action="/action_page.php">
+    <div>
         <label for="username">Họ và tên:<br>
             <input name="username" id="username" type="text" required>
-        </label><br>
+        </label>
+    </div>
+    <div>
         <label for="email">Email:<br>
             <input name="email" id="email" type="email" required>
-        </label><br>
+        </label>
+    </div>
+    <div>
         <label for="phone">Số điện thoại<br>
             <input name="phone" id="phone" type="number" required>
-        </label><br>
-        <label>Giới tính:</label><br>
+        </label>
+    </div>
+    <label>Giới tính:</label>
+    <div>
         <label for="male"><input name="gender" id="male" type="radio" value="M" checked>Nam</label>
         <label for="woman"> <input name="gender" id="woman" type="radio" value="W">Nữ</label>
-        <br>
-        <input type="submit" value="đăng ký">
-    </form>
+    </div>
+    <input type="submit" value="đăng ký">
+</form>
 </body>
 </html>
