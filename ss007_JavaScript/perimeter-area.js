@@ -2,8 +2,8 @@ let area;
 let perimeter;
 let selectedArea = document.getElementById("btnArea");
 let selectedPerimeter = document.getElementById("btnPerimeter");
-selectedArea.addEventListener("click_Area", showMessageArea);
-selectedPerimeter.addEventListener("click_Perimeter", showMessagePerimeter);
+selectedArea.addEventListener("click", showMessageArea);
+selectedPerimeter.addEventListener("click", showMessagePerimeter);
 function showMessageArea() {
     let width = parseInt(document.getElementById("width").value);
     let length = parseInt(document.getElementById("length").value);
