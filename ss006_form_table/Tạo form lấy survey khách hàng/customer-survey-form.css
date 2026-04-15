@@ -84,3 +84,7 @@ th, td {
     display: flex;
     flex-direction: column;
 }
+
+.text {
+    font-weight: bold;
+}
