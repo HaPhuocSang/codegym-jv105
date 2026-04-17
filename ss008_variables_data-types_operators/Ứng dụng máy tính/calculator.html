@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+<h1>Calculator</h1>
+<form>
+    <div class="container">
+        <div class="wrapper">
+            <label for="first_number"><input type="number" id="first_number" required></label>
+            <label for="second_number"><input type="number" id="second_number" required></label>
+        </div>
+        <div class="wrapper">
+            <button type="button" id="btnAddition">Addition(+)</button>
+            <button type="button" id="btnSubtraction">Subtraction(-)</button>
+            <button type="button" id="btnMultiplication">Multiplication(*)</button>
+            <button type="button" id="btnDivision">Division(/)</button>
+        </div>
+    </div>
+</form>
+<div style="display: flex; justify-content: flex-start; ">
+    Result: <p id="result" style="margin: 0;padding-left: 5px"></p>
+</div>
+<script src="calculator.js"></script>
+</body>
+</html>
