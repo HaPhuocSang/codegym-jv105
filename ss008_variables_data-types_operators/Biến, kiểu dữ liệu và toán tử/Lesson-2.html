@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Convert degrees Celsius to Fahrenheit</title>
+    <link rel="stylesheet" href="css/ls-p.css">
 </head>
 <body>
 <form>
     <div>
         <label for="Celsius">Celsius: </label>
         <input id="Celsius" type="number" required>
-        <button type="button" onclick="Celsius_Fahrenheit()">Submit</button>
+        <button type="button" onclick="celsiusFahrenheit()">Submit</button>
     </div>
 </form>
-<div style="display: flex; justify-content: flex-start">
-    Fahrenheit: <p id="Fahrenheit" style="text-v"></p>
+<div class="notification">
+    <p>Fahrenheit:</p>
+    <p id="Fahrenheit"></p>
 </div>
-<script src="js/ls2.js"></script>
+<script src="js/celsius-to-fahrenheit.js"></script>
 </body>
 </html>

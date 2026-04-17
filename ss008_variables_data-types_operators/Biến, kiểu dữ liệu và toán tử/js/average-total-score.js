@@ -1,7 +1,7 @@
 let average;
 let total;
 
-function average_total() {
+function averageTotal() {
     let physics = parseInt(document.getElementById("physics").value);
     let chemistry = parseInt(document.getElementById("chemistry").value);
     let biology = parseInt(document.getElementById("biology").value);

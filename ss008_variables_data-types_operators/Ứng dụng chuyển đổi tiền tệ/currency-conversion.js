@@ -1,13 +1,13 @@
-function currency_conversion() {
+function currencyConversion() {
     let amount = parseFloat(document.getElementById("amount").value);
-    let from_currency = document.getElementById("from_currency").value;
-    let to_currency = document.getElementById("to_currency").value;
+    let fromCurrency = document.getElementById("from_currency").value;
+    let toCurrency = document.getElementById("to_currency").value;
     let result;
     if (!isNaN(amount)) {
-        if (from_currency === to_currency) {
+        if (fromCurrency === toCurrency) {
             result = amount;
         } else {
-            if (from_currency === "VND" && to_currency === "USD") {
+            if (fromCurrency === "USD") {
                 result = amount / 26000;
             } else {
                 result = amount * 26000;

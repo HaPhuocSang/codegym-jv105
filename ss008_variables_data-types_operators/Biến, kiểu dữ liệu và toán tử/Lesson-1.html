@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Average score and total score</title>
+    <link rel="stylesheet" href="css/ls-p.css">
 </head>
 <body>
 <form>
@@ -18,17 +19,18 @@
         <label for="biology">Biology: </label>
         <input id="biology" type="number" min="0" max="100" required>
     </div>
-    <div style="display: flex; justify-content: flex-start">
+    <div class="notification">
         <p>Average score: </p>
         <p id="average"></p>
     </div>
     <div>
-        <button type="button" onclick="average_total()">Submit</button>
+        <button type="button" onclick="averageTotal()">Submit</button>
     </div>
-    <div style="display: flex; justify-content: flex-start; padding-top: 10px">
-        Total score: <p id="total"></p>
+    <div class="notification">
+        <p>Total score: </p>
+        <p id="total"></p>
     </div>
 </form>
-<script src="js/ls1.js"></script>
+<script src="js/average-total-score.js"></script>
 </body>
 </html>

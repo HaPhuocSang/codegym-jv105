@@ -8,9 +8,15 @@ selectedSubtraction.addEventListener("click", showSubtractionResults);
 selectedMultiplication.addEventListener("click", showMultiplicationResults);
 selectedDivision.addEventListener("click", showDivisionResults);
 
-function showAdditionResults() {
+function inputNumber() {
     let first_number = parseFloat(document.getElementById("first_number").value);
     let second_number = parseFloat(document.getElementById("second_number").value);
+    result = first_number,second_number;
+
+}
+
+function showAdditionResults() {
+
     result = first_number + second_number;
     document.getElementById("result").innerHTML = result;
 }
