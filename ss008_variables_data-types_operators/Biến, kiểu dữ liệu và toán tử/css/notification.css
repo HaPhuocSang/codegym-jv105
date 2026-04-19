@@ -1,0 +1,8 @@
+.notification {
+    display: flex;
+}
+
+.notification {
+    display: flex;
+    gap: 5px;
+}

@@ -7,7 +7,7 @@ function currencyConversion() {
         if (fromCurrency === toCurrency) {
             result = amount;
         } else {
-            if (fromCurrency === "USD") {
+            if (fromCurrency === "VND") {
                 result = amount / 26000;
             } else {
                 result = amount * 26000;
@@ -16,5 +16,5 @@ function currencyConversion() {
     } else {
         result = 0;
     }
-    document.getElementById("result").innerHTML = result + " " + to_currency;
+    document.getElementById("result").innerHTML = result + " " + toCurrency;
 }

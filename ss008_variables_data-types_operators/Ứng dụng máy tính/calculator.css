@@ -16,3 +16,7 @@ body {
     flex-direction: row;
     gap: 5px;
 }
+.notification{
+    display: flex;
+    gap: 5px;
+}
