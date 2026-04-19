@@ -35,3 +35,4 @@ function showDivisionResults() {
     result = first_number / second_number;
     document.getElementById("result").innerHTML = result;
 }
+
