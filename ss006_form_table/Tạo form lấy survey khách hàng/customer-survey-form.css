@@ -4,7 +4,7 @@ body {
 }
 
 select {
-    width: 300px;
+    min-width: 300px;
     background-color: #999999;
 }
 
