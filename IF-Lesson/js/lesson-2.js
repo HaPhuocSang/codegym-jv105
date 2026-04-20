@@ -12,7 +12,7 @@ function showCheckGraduate(){
     }
     let result;
     if (!isNaN(age)){
-        if (age >= 18 && graduateValue === "Graduated"){
+        if (age >= 15 && graduateValue === "Graduated"){
             result = "Eligible to enter 10th grade";
         }
         else {
