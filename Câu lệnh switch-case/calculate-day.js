@@ -4,21 +4,14 @@ selectedCalculateDays.addEventListener("click", calculateDay);
 
 function calculateDay() {
     let month = parseFloat(document.getElementById("month").value);
+    const monthDays31 = [1,3,5,7,8,10,12];
+    const monthDays30 = [4,6,9,11];
     if (!isNaN(month)) {
         switch (month) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
+            case monthDays31.includes(month):
                 result = "31 days";
                 break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
+            case monthDays30.includes(month):
                 result = "30 days";
                 break;
             case 2:
