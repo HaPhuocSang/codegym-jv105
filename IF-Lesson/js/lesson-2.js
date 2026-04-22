@@ -1,25 +1,20 @@
 let selectedCheckGraduate = document.getElementById("checkGraduate");
 selectedCheckGraduate.addEventListener("click", showCheckGraduate);
-function showCheckGraduate(){
+
+function showCheckGraduate() {
     let age = parseFloat(document.getElementById("age").value);
-    let graduateList = document.getElementsByName("graduated");
-    let graduateValue;
-    for (let i = 0; i < graduateList.length; i++) {
-        if (graduateList[i].checked){
-            graduateValue = graduateList[i].value;
-            break;
-        }
-    }
+    const selectedGraduate = document.querySelector(
+        'input[name="graduated"]:checked'
+    );
+    let graduateValue= selectedGraduate.value;
     let result;
-    if (!isNaN(age)){
-        if (age >= 15 && graduateValue === "Graduated"){
+    if (!isNaN(age)) {
+        if (age >= 15 && graduateValue === "Graduated") {
             result = "Eligible to enter 10th grade";
-        }
-        else {
+        } else {
             result = "Not eligible to enter 10th grade.";
         }
-    }
-    else {
+    } else {
         result = "Input age";
     }
     document.getElementById("result").innerHTML = result;
