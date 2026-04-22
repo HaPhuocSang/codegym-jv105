@@ -16,7 +16,7 @@ function performCalculations() {
         if (operation1.includes(textDisplay[0])) {
             return;
         } else {
-            textDisplay = textDisplay.replace(/--/, "+")
+            textDisplay = textDisplay.replace(/--/g, "+");
         }
     }
     if (textDisplay === "" || operation1.includes(textEnd) || operation2.includes(textStart)) {
@@ -28,7 +28,7 @@ function performCalculations() {
         }
     }
     if (textDisplay.includes("x")) {
-        textDisplay = textDisplay.replace(/x/g, "*")
+        textDisplay = textDisplay.replace(/x/g, "*");
     }
 
     textDisplay = eval(textDisplay).toString();
