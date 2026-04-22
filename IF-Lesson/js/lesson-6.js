@@ -10,12 +10,13 @@ function showCommissionPercentage() {
         document.getElementById("result").innerHTML = result;
         return;
     }
-    if (commissionPercentage >= 0) {
-        let money;
-        money = totalRevenue * commissionPercentage / 100;
-        result = "The percentage of commission received is " + money;
-    } else {
+    if (commissionPercentage < 0) {
         result = "The commission percentage must not be less than 0."
+        document.getElementById("result").innerHTML = result;
+        return;
     }
+    let money;
+    money = totalRevenue * commissionPercentage / 100;
+    result = "The percentage of commission received is " + money;
     document.getElementById("result").innerHTML = result;
 }
