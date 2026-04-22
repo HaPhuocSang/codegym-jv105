@@ -7,9 +7,9 @@ function showDivisible() {
     let b = parseFloat(document.getElementById("numberB").value);
     if (!isNaN(a) && !isNaN(b)) {
         if (a % b === 0) {
-            result = a + " is divisible by " + b;
+            result = `${a} is divisible by ${b}`;
         } else {
-            result = a + " is not divisible by " + b;
+            result = `${a} is not divisible by ${b}`;
         }
     } else {
         result = "Input a, b";
