@@ -12,6 +12,13 @@ function inputNumberAndCalculations(numCal) {
 function performCalculations() {
     let textEnd = textDisplay[textDisplay.length - 1];
     let textStart = textDisplay[0];
+    if (textDisplay.includes("--")) {
+        if (operation1.includes(textDisplay[0])) {
+            return;
+        } else {
+            textDisplay = textDisplay.replace(/--/, "+")
+        }
+    }
     if (textDisplay === "" || operation1.includes(textEnd) || operation2.includes(textStart)) {
         return;
     }
@@ -23,6 +30,7 @@ function performCalculations() {
     if (textDisplay.includes("x")) {
         textDisplay = textDisplay.replace(/x/g, "*")
     }
+
     textDisplay = eval(textDisplay).toString();
     document.getElementById("viewDisplay").value = textDisplay;
 
