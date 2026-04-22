@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="changeBackgroundCoLer(0)">Yellow</button>
+<button type="button" onclick="changeBackgroundCoLer(1)">Blue</button>
+<button type="button" onclick="changeBackgroundCoLer(2)">Green</button>
+<button type="button" onclick="changeBackgroundCoLer(3)">White</button>
+<script>
+    const bgColor = ['red', 'green', 'blue','white'];
+    function changeBackgroundCoLer(index) {
+        document.body.style.backgroundColor = bgColor[index];
+    }
+</script>
+</body>
+</html>
