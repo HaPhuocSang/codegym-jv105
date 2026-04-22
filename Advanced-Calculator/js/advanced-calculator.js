@@ -1,7 +1,7 @@
 let textDisplay = "";
-const operation1 = "+-*/";
-const operation2 = "+*/";
-const operation3 = ["++","+*","+/","-+","-*","-/","*+","**","*/","/+","/*","//"];
+const operation1 = "+-x/";
+const operation2 = "+x/";
+const operation3 = ["++", "+x", "+/", "-+", "-x", "-/", "x+", "xx", "x/", "/+", "/x", "//"];
 document.getElementById("viewDisplay").value = textDisplay;
 
 function inputNumberAndCalculations(numCal) {
@@ -16,16 +16,19 @@ function performCalculations() {
         return;
     }
     for (let i = 0; i < operation3.length; i++) {
-        if (textDisplay.includes(operation3[i])){
+        if (textDisplay.includes(operation3[i])) {
             return;
         }
     }
-    textDisplay = eval(textDisplay).toString(); 
+    if (textDisplay.includes("x")) {
+        textDisplay = textDisplay.replace(/x/g, "*")
+    }
+    textDisplay = eval(textDisplay).toString();
     document.getElementById("viewDisplay").value = textDisplay;
 
 }
 
-function deleteText(){
+function deleteText() {
     textDisplay = "";
     document.getElementById("viewDisplay").value = textDisplay;
 }
