@@ -3,6 +3,7 @@ selectedAcademicRanking.addEventListener("click", showAcademicRanking);
 const exl = 8;
 const good = 6.5;
 const ave = 5;
+
 function showAcademicRanking() {
     let score1 = parseFloat(document.getElementById("test-score").value);
     let score2 = parseFloat(document.getElementById("midterm-exam-scores").value);
