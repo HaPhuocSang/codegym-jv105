@@ -2,8 +2,6 @@ function quadraticEquation() {
     let firstNumber = parseFloat(document.getElementById("firstNumber").value);
     let secondNumber = parseFloat(document.getElementById("secondNumber").value);
     let thirdNumber = parseFloat(document.getElementById("thirdNumber").value);
-    let delta;
-    let result;
     if (isNaN(firstNumber) || isNaN(secondNumber) || isNaN(thirdNumber)) {
         document.getElementById("result").innerHTML = "Please enter a number.";
         return;
@@ -12,7 +10,8 @@ function quadraticEquation() {
         document.getElementById("result").innerHTML = "This is not a quadratic equation.";
         return;
     }
-    delta = secondNumber * secondNumber - 4 * firstNumber * thirdNumber;
+    let delta = secondNumber * secondNumber - 4 * firstNumber * thirdNumber;
+    let result;
     if (delta < 0) {
         result = "The equation has no solution.";
     } else if (delta === 0) {
