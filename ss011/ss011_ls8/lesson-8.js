@@ -9,10 +9,6 @@ function checkAge() {
         document.getElementById("result").innerHTML = "Please enter an integer.";
         return;
     }
-    if (age > 0 && age < 120) {
-        result = `Your age is ${age}.`;
-    } else {
-        result = "This is not a person's age.";
-    }
+    result = age > 0 && age < 120 ? `Your age is ${age}.` : "This is not a person's age.";
     document.getElementById("result").innerHTML = result;
 }
