@@ -13,7 +13,7 @@ function numberGuessingGame() {
     let count = 0;
     let guessingNumber
     do {
-        guessingNumber = parseFloat(prompt("Nhập số ba muốn đoán: "));
+        guessingNumber = parseFloat(prompt("Nhập số bạn muốn đoán: "));
         if (isNaN(guessingNumber)) {
             alert("Vui lòng nhập số!");
             continue;
