@@ -8,7 +8,7 @@ for (let i = 1; i < 10; i++) {
         td.style.border = "1px solid black";
         td.style.padding = "5px";
         td.style.width = "100px";
-        td.innerHTML = `${j}x${i}= ${j * i}`;
+        td.textContent = `${j}x${i}= ${j * i}`;
         tr.appendChild(td);
     }
     table.appendChild(tr);
