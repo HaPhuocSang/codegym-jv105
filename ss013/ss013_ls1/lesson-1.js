@@ -3,8 +3,8 @@ selectedFibonacci.addEventListener("click", displayFibonacci);
 
 function displayFibonacci() {
     let numberFibonacciDisplay = parseFloat(document.getElementById("numberFibonacci").value);
-    if (numberFibonacciDisplay < 1) {
-        alert("Không thể nhỏ hơn 1!")
+    if (numberFibonacciDisplay < 1 || !Number.isInteger(numberFibonacciDisplay)) {
+        alert("Không nhập vào không hợp lệ!")
         return;
     }
     let fibonacciDisplay = "";
