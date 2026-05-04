@@ -1,6 +1,6 @@
+let currentTemperature;
 const MIN_TEMPERATURE = 20;
 const MAX_TEMPERATURE = 100;
-let currentTemperature;
 do {
     currentTemperature = parseFloat(prompt("Nhập nhiệt độ hiện tại: "));
     if (isNaN(currentTemperature)) {
