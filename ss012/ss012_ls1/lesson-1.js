@@ -1,9 +1,9 @@
 let selectedLoop = document.getElementById('btnLoop');
 selectedLoop.addEventListener('click', showListNumber);
-const END_NUMBER = 100;
+const LAST_NUMBER = 100;
 function showListNumber() {
     let listNumber = "";
-    for (let i = 1; i < END_NUMBER; i++) {
+    for (let i = 1; i < LAST_NUMBER; i++) {
         listNumber += i + " ";
     }
     alert("Đã hoàn thành!");
