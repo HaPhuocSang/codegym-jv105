@@ -15,5 +15,5 @@ function displayDivisibleByFive() {
         currentFibonacci = nextFibonacci;
         nextFibonacci = sum;
     }
-    document.getElementById("result").innerHTML = currentFibonacci.toString();
+    document.getElementById("result").textContent = currentFibonacci.toString();
 }
