@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div class="container">
+    <form>
+        <div class="big-chill">
+            <div class="mall-chill">
+                <label><input id="viewDisplay" type="text" disabled></label>
+            </div>
+            <div class="mall-chill">
+                <button type="button" onclick="inputNumberAndCalculations(1)">1</button>
+                <button type="button" onclick="inputNumberAndCalculations(2)">2</button>
+                <button type="button" onclick="inputNumberAndCalculations(3)">3</button>
+                <button type="button" onclick="inputNumberAndCalculations('+')">+</button>
+            </div>
+            <div class="mall-chill">
+                <button type="button" onclick="inputNumberAndCalculations(4)">4</button>
+                <button type="button" onclick="inputNumberAndCalculations(5)">5</button>
+                <button type="button" onclick="inputNumberAndCalculations(6)">6</button>
+                <button type="button" onclick="inputNumberAndCalculations('-')">-</button>
+            </div>
+            <div class="mall-chill">
+                <button type="button" onclick="inputNumberAndCalculations(7)">7</button>
+                <button type="button" onclick="inputNumberAndCalculations(8)">8</button>
+                <button type="button" onclick="inputNumberAndCalculations(9)">9</button>
+                <button type="button" onclick="inputNumberAndCalculations('x')">x</button>
+            </div>
+            <div class="mall-chill">
+                <button type="button" onclick="deleteText()">C</button>
+                <button type="button" onclick="inputNumberAndCalculations(0)">0</button>
+                <button type="button" onclick="performCalculations()">=</button>
+                <button type="button" onclick="inputNumberAndCalculations('/')">/</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/advanced-calculator.js"></script>
+</body>
+</html>
