@@ -1,14 +1,12 @@
 let selectedLoop = document.getElementById('btnLoop');
-selectedLoop.addEventListener('click', displayLoop);
-
-function displayLoop() {
-    let disLoop = "";
-    for (let i = 1; i < 100; i++) {
-        disLoop += i + " ";
-        if (i === 99){
-            alert("Đã hoàn thành!");
-        }
+selectedLoop.addEventListener('click', showListNumber);
+const END_NUMBER = 100;
+function showListNumber() {
+    let listNumber = "";
+    for (let i = 1; i < END_NUMBER; i++) {
+        listNumber += i + " ";
     }
-    document.getElementById("result").innerHTML = disLoop;
+    alert("Đã hoàn thành!");
+    document.getElementById("result").textContent = listNumber;
 }
 
