@@ -13,6 +13,6 @@ function displayFactorial() {
             result *= i;
         }
     }
-    document.getElementById("result").innerHTML = `${numFactorial}! = ${result}`;
+    document.getElementById("result").textContent = `${numFactorial}! = ${result}`;
 }
 
