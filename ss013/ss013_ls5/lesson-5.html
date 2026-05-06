@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</title>
+</head>
+<body>
+<form>
+  <div>
+    <label for="initialAmount">Số tiền ban đầu: </label>
+    <input type="number" id="initialAmount" name="initialAmount">
+  </div>
+  <div>
+    <label for="numberMonths">Số tháng cho vay: </label>
+    <input type="number" id="numberMonths" name="numberMonths">
+  </div>
+  <div>
+    <label for="monthlyInterest">Lãi xuất hàng tháng: </label>
+    <input type="number" id="monthlyInterest" name="monthlyInterest">
+  </div>
+  <div>
+    <button type="button" onclick="calculateBankInterest()">Submit</button>
+  </div>
+</form>
+<p id="result"></p>
+<script src="lesson-5.js"></script>
+</body>
+</html>
