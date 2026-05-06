@@ -16,5 +16,5 @@ function displayFibonacci() {
         currentFibonacci = nextFibonacci;
         nextFibonacci = sum;
     }
-    document.getElementById("result").innerHTML = fibonacciDisplay;
+    document.getElementById("result").textContent = fibonacciDisplay;
 }
