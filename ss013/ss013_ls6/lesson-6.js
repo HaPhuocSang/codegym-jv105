@@ -1,25 +1,25 @@
 let selectedHeartShape = document.getElementById("btnHeartShape");
 selectedHeartShape.addEventListener("click", showHeartShape)
 const HEART_WIDTH = 17;
-const FIRST_THREE_FLOORS = 4;
+const FIRST_FOUR_FLOORS = 4;
 const REMAINING_FLOOR_SPACE = 9;
 
 function showHeartShape() {
     let result = "";
-    let spaceOfFirstThreeFloors = 3;
-    let spaceBetweenFirstThreeFloors = [7, 8, 9, 10, 11];
-    for (let i = 1; i <= FIRST_THREE_FLOORS; i++) {
+    let spaceOfFirstFourFloors = 3;
+    let spaceBetweenFirstFourFloors = [7, 8, 9, 10, 11];
+    for (let i = 1; i <= FIRST_FOUR_FLOORS; i++) {
         for (let j = 1; j <= HEART_WIDTH; j++) {
-            if (j <= spaceOfFirstThreeFloors || spaceBetweenFirstThreeFloors.includes(j) || j >= HEART_WIDTH - spaceOfFirstThreeFloors + 1) {
+            if (j <= spaceOfFirstFourFloors || spaceBetweenFirstFourFloors.includes(j) || j >= HEART_WIDTH - spaceOfFirstFourFloors + 1) {
                 result += "&nbsp;";
             } else {
                 result += "*";
             }
         }
         result += "<br>";
-        spaceOfFirstThreeFloors--;
-        spaceBetweenFirstThreeFloors.shift();
-        spaceBetweenFirstThreeFloors.pop();
+        spaceOfFirstFourFloors--;
+        spaceBetweenFirstFourFloors.shift();
+        spaceBetweenFirstFourFloors.pop();
     }
     let spaceOfRemainingFloors = 0;
     for (let i = 1; i <= REMAINING_FLOOR_SPACE; i++) {
