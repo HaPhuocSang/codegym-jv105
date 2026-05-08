@@ -1,4 +1,4 @@
-const NUMBER_INTEGER = [];
+const CALMEL_CASE = [];
 const MIN_ELEMENTS = 1;
 const MAX_ELEMENTS = 10;
 const FIRST_POSITION = 0;
@@ -15,26 +15,26 @@ function pushInitializeAnArray() {
             if (!Number.isInteger(numberInt)) {
                 alert("Số bạn nhập vào không phải số nguyên!")
             }
-            if (NUMBER_INTEGER.includes(numberInt)) {
+            if (CALMEL_CASE.includes(numberInt)) {
                 alert("Giá trị bạn nhập đã tồn tại!");
             }
-        } while (!Number.isInteger(numberInt) || NUMBER_INTEGER.includes(numberInt));
-        NUMBER_INTEGER[i] = numberInt;
+        } while (!Number.isInteger(numberInt) || CALMEL_CASE.includes(numberInt));
+        CALMEL_CASE[i] = numberInt;
     }
-    let result = NUMBER_INTEGER.join(", ");
+    let result = CALMEL_CASE.join(", ");
     document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa nhập vào là: ${result}`;
 }
 
 function showLargestElementAndPosition() {
-    if (NUMBER_INTEGER.length < MIN_ELEMENTS) {
+    if (CALMEL_CASE.length < MIN_ELEMENTS) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
-    let max = NUMBER_INTEGER[FIRST_POSITION];
+    let max = CALMEL_CASE[FIRST_POSITION];
     let position = FIRST_POSITION;
-    for (let i = 0; i < NUMBER_INTEGER.length; i++) {
-        if (max <= NUMBER_INTEGER[i]) {
-            max = NUMBER_INTEGER[i];
+    for (let i = 0; i < CALMEL_CASE.length; i++) {
+        if (max <= CALMEL_CASE[i]) {
+            max = CALMEL_CASE[i];
             position = i;
         }
     }
