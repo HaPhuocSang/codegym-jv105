@@ -36,6 +36,7 @@ function deleteValue() {
     }
     if (!checkDelete) {
         alert("Không tìm thấy giá trị cần xóa!");
+        return;
     }
     let result = NUMBER_INTEGER.join(", ");
     document.getElementById("resultLast").textContent = `Mảng sau khi xóa ${elementDelete} là: ${result}`;
