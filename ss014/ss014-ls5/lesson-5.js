@@ -17,7 +17,7 @@ function pushInitializeAnArray() {
         NUMBER_INTEGER.push(Math.floor(Math.random() * (MAX_RANDOM - MIN_RANDOM + INCLUSIVE_RANGE)) + MIN_RANDOM);
     }
     let result = NUMBER_INTEGER.join(", ");
-    document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa nhập vào là: ${result}`;
+    document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa khởi tạo là: ${result}`;
 }
 
 function showNegativeElement() {
