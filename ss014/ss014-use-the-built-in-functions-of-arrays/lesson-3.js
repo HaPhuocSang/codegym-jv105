@@ -4,7 +4,7 @@ function isUpperCase(str) {
 
 function formatConversion() {
     let valueString = document.getElementById('valueString').value;
-    if(valueString.length === 0) {
+    if(!valueString.trim().length) {
         alert("Giá trị nhập vào không hợp lệ!")
         return;
     }
