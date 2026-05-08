@@ -14,7 +14,7 @@ function pushInitializeAnArray() {
         NUMBER_INTEGER.push(Math.floor(Math.random() * 1000));
     }
     let result = NUMBER_INTEGER.join(", ");
-    document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa nhập vào là: ${result}`;
+    document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa khởi tạo là: ${result}`;
 }
 
 function showLargestElement() {
