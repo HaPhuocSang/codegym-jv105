@@ -1,5 +1,4 @@
 const NUMBER_INTEGER = [];
-const MIN_ELEMENTS = 1;
 const MAX_ELEMENTS = 10;
 const MAX_RANDOM = 100;
 const MIN_RANDOM = -100;
@@ -15,7 +14,7 @@ function pushInitializeAnArray() {
 }
 
 function elementInspection() {
-    if (NUMBER_INTEGER.length < MIN_ELEMENTS) {
+    if (!NUMBER_INTEGER.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
