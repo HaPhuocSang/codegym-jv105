@@ -1,5 +1,4 @@
 const NUMBER_INTEGER = [];
-const MIN_ELEMENTS = 1;
 
 function pushInitializeAnArray() {
     NUMBER_INTEGER.length = 0;
@@ -18,7 +17,7 @@ function pushInitializeAnArray() {
 }
 
 function showLargestElement() {
-    if (NUMBER_INTEGER.length < MIN_ELEMENTS) {
+    if (!NUMBER_INTEGER.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
@@ -32,7 +31,7 @@ function showLargestElement() {
 }
 
 function showAverageElement() {
-    if (NUMBER_INTEGER.length < MIN_ELEMENTS) {
+    if (!NUMBER_INTEGER.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
