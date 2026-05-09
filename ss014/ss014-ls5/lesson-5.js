@@ -1,5 +1,4 @@
 const NUMBER_INTEGER = [];
-const MIN_ELEMENTS = 1;
 const MAX_RANDOM = 100;
 const MIN_RANDOM = -100;
 const INCLUSIVE_RANGE = 1;
@@ -21,20 +20,18 @@ function pushInitializeAnArray() {
 }
 
 function showNegativeElement() {
-    if (NUMBER_INTEGER.length < MIN_ELEMENTS) {
+    if (!NUMBER_INTEGER.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
     let result = [];
-    let countNegative = 0;
     for (let i = 0; i < NUMBER_INTEGER.length; i++) {
         if (NUMBER_INTEGER[i] < 0) {
             result.push(NUMBER_INTEGER[i]);
-            countNegative++;
         }
     }
-    let txt = `Có ${countNegative} số nguyên âm trong mảng đó là: ${result.join(", ")}`;
-    if (countNegative === 0) {
+    let txt = `Có ${result.length} số nguyên âm trong mảng đó là: ${result.join(", ")}`;
+    if (!result.length) {
         txt = "Không có số nguyên âm nào trong mảng!";
     }
     document.getElementById("resultLast").textContent = txt;
