@@ -1,5 +1,4 @@
 const CALMEL_CASE = [];
-const MIN_ELEMENTS = 1;
 const MAX_ELEMENTS = 10;
 const FIRST_POSITION = 0;
 let selectedBtnInitializeAnArray = document.getElementById("btnInitializeAnArray");
@@ -26,7 +25,7 @@ function pushInitializeAnArray() {
 }
 
 function showLargestElementAndPosition() {
-    if (CALMEL_CASE.length < MIN_ELEMENTS) {
+    if (!CALMEL_CASE.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
