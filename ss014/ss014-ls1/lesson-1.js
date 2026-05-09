@@ -1,6 +1,5 @@
 const LIST_NUMBER = [];
-const MAX_ELEMENTS = 10;
-const MIN_ELEMENTS = 1;
+const MAX_ELEMENTS = 10; 
 const LIMIT_NUMBER = 10;
 let selectedBtnInitializeAnArray = document.getElementById("btnInitializeAnArray");
 let selectedBtnDisplayIntegers = document.getElementById("btnDisplayIntegers");
@@ -21,7 +20,7 @@ function pushInitializeAnArray() {
 }
 
 function showArrayInteger() {
-    if (LIST_NUMBER.length < MIN_ELEMENTS) {
+    if (!LIST_NUMBER.length) {
         alert("Bạn chưa khởi tạo mảng!");
         return;
     }
@@ -33,8 +32,8 @@ function showArrayInteger() {
             countNumber++;
         }
     }
-    let txt = `Có ${countNumber} giá trị lớn hơn hoặc bằng ${LIMIT_NUMBER} đó là ${result.join(", ")}`;
-    if (countNumber === 0) {
+    let txt = `Có ${result.length} giá trị lớn hơn hoặc bằng ${LIMIT_NUMBER} đó là ${result.join(", ")}`;
+    if (!result.length) {
         txt = `Không có số nào lớn hơn hoặc bằng ${LIMIT_NUMBER}`;
     }
     document.getElementById("resultLast").textContent = txt;
