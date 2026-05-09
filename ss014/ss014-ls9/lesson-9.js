@@ -1,7 +1,6 @@
-const A=[];
+const A = [];
 const B = [];
 const C = [];
-const MIN_ELEMENTS = 1;
 const MAX_ELEMENTS = 10;
 const MAX_RANDOM = 100;
 const MIN_RANDOM = -100;
@@ -24,7 +23,7 @@ function pushInitializeAnArray() {
 
 function joinArraysAAndB() {
     C.length = 0;
-    if (A.length < MIN_ELEMENTS || B.length < MIN_ELEMENTS) {
+    if (!A.length || !B.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
