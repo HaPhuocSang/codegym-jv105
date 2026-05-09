@@ -1,5 +1,5 @@
 const LIST_NUMBER = [];
-const MAX_ELEMENTS = 10; 
+const MAX_ELEMENTS = 10;
 const LIMIT_NUMBER = 10;
 let selectedBtnInitializeAnArray = document.getElementById("btnInitializeAnArray");
 let selectedBtnDisplayIntegers = document.getElementById("btnDisplayIntegers");
@@ -24,12 +24,10 @@ function showArrayInteger() {
         alert("Bạn chưa khởi tạo mảng!");
         return;
     }
-    let countNumber = 0;
     let result = [];
     for (let i = 0; i < LIST_NUMBER.length; i++) {
         if (LIST_NUMBER[i] >= LIMIT_NUMBER) {
-            result.push(LIST_NUMBER[i]);
-            countNumber++;
+            result.push(LIST_NUMBER[i]); 
         }
     }
     let txt = `Có ${result.length} giá trị lớn hơn hoặc bằng ${LIMIT_NUMBER} đó là ${result.join(", ")}`;
