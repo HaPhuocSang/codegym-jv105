@@ -10,5 +10,5 @@ function countCharacters() {
     if (!result.length) {
         txt = "Không có ký tự nào trong chuỗi bạn vừa nhập!";
     }
-    document.getElementById("result").innerHTML = txt;
+    document.getElementById("result").textContent = txt;
 }
