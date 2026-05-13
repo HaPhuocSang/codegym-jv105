@@ -3,16 +3,10 @@ const VIETNAMESE_WORDS = ["xin chào", "quyển sách", "máy tính", "quả tá
 
 function showVietnameseWord() {
     let englishWord = document.getElementById("englishWord").value;
-    if (englishWord.length === 0) {
+    if (!englishWord.length) {
         alert("Bạn chưa nhập từ tiếng anh!");
         return;
     }
     englishWord = englishWord.toLowerCase();
-    let result;
-    if (ENGLISH_WORDS.indexOf(englishWord) !== -1) {
-        result = VIETNAMESE_WORDS[ENGLISH_WORDS.indexOf(englishWord)];
-    } else {
-        result = "Không tìm thấy!";
-    }
-    document.getElementById("result").textContent = result;
+    document.getElementById("result").textContent = ENGLISH_WORDS.indexOf(englishWord) !== -1 ? VIETNAMESE_WORDS[ENGLISH_WORDS.indexOf(englishWord)] :"Không tìm thấy!";
 }
