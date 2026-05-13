@@ -1,4 +1,4 @@
-const CALMEL_CASE = [];
+const listNumber = [];
 const MAX_ELEMENTS = 10;
 const FIRST_POSITION = 0;
 let selectedBtnInitializeAnArray = document.getElementById("btnInitializeAnArray");
@@ -14,26 +14,26 @@ function pushInitializeAnArray() {
             if (!Number.isInteger(numberInt)) {
                 alert("Số bạn nhập vào không phải số nguyên!")
             }
-            if (CALMEL_CASE.includes(numberInt)) {
+            if (listNumber.includes(numberInt)) {
                 alert("Giá trị bạn nhập đã tồn tại!");
             }
-        } while (!Number.isInteger(numberInt) || CALMEL_CASE.includes(numberInt));
-        CALMEL_CASE[i] = numberInt;
+        } while (!Number.isInteger(numberInt) || listNumber.includes(numberInt));
+        listNumber[i] = numberInt;
     }
-    let result = CALMEL_CASE.join(", ");
+    let result = listNumber.join(", ");
     document.getElementById("resultFirst").textContent = `Các giá trị mà bạn vừa nhập vào là: ${result}`;
 }
 
 function showLargestElementAndPosition() {
-    if (!CALMEL_CASE.length) {
+    if (!listNumber.length) {
         alert("Bạn Chưa khởi tạo mảng!");
         return;
     }
-    let max = CALMEL_CASE[FIRST_POSITION];
+    let max = listNumber[FIRST_POSITION];
     let position = FIRST_POSITION;
-    for (let i = 0; i < CALMEL_CASE.length; i++) {
-        if (max <= CALMEL_CASE[i]) {
-            max = CALMEL_CASE[i];
+    for (let i = 0; i < listNumber.length; i++) {
+        if (max <= listNumber[i]) {
+            max = listNumber[i];
             position = i;
         }
     }
