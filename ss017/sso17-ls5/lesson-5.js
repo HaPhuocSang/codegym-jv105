@@ -10,7 +10,7 @@ function findTheSmallest(a, b, c) {
 }
 
 function checkInteger(number) {
-    return number.trim() !== "" && Number.isInteger(Number(number));
+    return number.trim() && Number.isInteger(Number(number));
 }
 
 function showResult() {
