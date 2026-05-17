@@ -9,12 +9,9 @@ function showResult() {
         alert("Giá trị nhập vào không hợp lệ!");
         return;
     }
-    let result;
     if (comparison(firstNumber, secondNumber)) {
         alert(`${firstNumber} > ${secondNumber}`);
         return;
-    } else {
-        result = `Tổng là ${firstNumber + secondNumber}`;
     }
-    document.getElementById("result").textContent = result;
+    document.getElementById("result").textContent = `Tổng là ${firstNumber + secondNumber}`;
 }
