@@ -1,16 +1,13 @@
 function checkPrimeNumbers(number) {
-    let result = true;
     if (number <= 1) {
-        result = false;
-    } else {
-        for (let i = 2; i < Math.sqrt(number); i++) {
-            if (!(number % i)) {
-                result = false;
-                break;
-            }
+        return false;
+    }
+    for (let i = 2; i < Math.sqrt(number); i++) {
+        if (!(number % i)) {
+            return false;
         }
     }
-    return result;
+    return true;
 }
 
 function showPrimeNumbers() {
