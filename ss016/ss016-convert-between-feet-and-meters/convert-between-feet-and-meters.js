@@ -9,15 +9,13 @@ function switchToFeet(number) {
 function convertBetweenFeetAndMeters() {
     let numberFeet = parseFloat(document.getElementById("numberFeet").value);
     let numberMeters = parseFloat(document.getElementById("numberMeters").value);
-    let resultFirst;
-    let resultSecond;
-    resultFirst = `${switchToMeters(numberFeet).toFixed(3)}m`;
-    resultSecond = `${switchToFeet(numberMeters).toFixed(3)}ft`;
-    if (isNaN(numberFeet)) {
-        resultFirst = "";
+    let resultFirst = "";
+    let resultSecond = "";
+    if (!isNaN(numberFeet)) {
+        resultFirst = `${switchToMeters(numberFeet).toFixed(3)}m`;
     }
-    if (isNaN(numberMeters)) {
-        resultSecond = "";
+    if (!isNaN(numberMeters)) {
+        resultSecond = `${switchToFeet(numberMeters).toFixed(3)}ft`;
     }
     document.getElementById("resultFirst").textContent = resultFirst.toString();
     document.getElementById("resultSecond").textContent = resultSecond.toString();
