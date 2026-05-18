@@ -3,31 +3,26 @@ let editIndex = -1;
 
 function displayProducts() {
     let tbody = document.querySelector("#productList");
-    tbody.innerHTML = "";
-    for (let i = 0; i < products.length; i++) {
-        let tr = document.createElement("tr");
-        let tdIndex = document.createElement("td");
-        tdIndex.textContent = (i + 1).toString();
-        let tdProductName = document.createElement("td");
-        tdProductName.textContent = products[i];
-        let tdEdit = document.createElement("td");
-        let editBtn = document.createElement("button");
-        editBtn.textContent = "Edit";
-        editBtn.className = "edit-btn";
-        editBtn.onclick = () => editProduct(i);
-        tdEdit.appendChild(editBtn);
-        let tdDelete = document.createElement("td");
-        let deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
-        deleteBtn.classList.add("delete-btn");
-        deleteBtn.onclick = () => deleteProduct(i);
-        tdDelete.appendChild(deleteBtn);
-        tr.appendChild(tdIndex);
-        tr.appendChild(tdProductName);
-        tr.appendChild(tdEdit);
-        tr.appendChild(tdDelete);
-        tbody.appendChild(tr);
-    }
+    tbody.innerHTML = products.map((productName, index) => `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${productName}</td>
+            <td>
+                <button 
+                    class="edit-btn" 
+                    onclick="editProduct(${index})">
+                    Edit
+                </button>
+            </td>
+            <td>
+                <button 
+                    class="delete-btn" 
+                    onclick="deleteProduct(${index})">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    `).join("");
 }
 
 function addProduct() {
@@ -56,14 +51,7 @@ function editProduct(index) {
 function deleteProduct(index) {
     let check = confirm("Bạn có chắc muốn xoá sản phẩm này?");
     if (check) {
-        for (let i = 0; i < products.length; i++) {
-            if (i === index) {
-                for (let j = i; j < products.length - 1; j++) {
-                    products[j] = products[j + 1];
-                }
-                products.pop();
-            }
-        }
+        products.splice(index, 1);
         alert("Xoá sản phẩm thành công!");
     }
     displayProducts();
