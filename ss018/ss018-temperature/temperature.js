@@ -5,11 +5,9 @@ function Temperature(celsius) {
 
 Temperature.prototype.minCelsius = function () {
     if (this.celsius < -273) {
-        alert("Nhiệt độ nhỏ nhất là -273°C!");
-        throw new Error("Invalid temperature");
+        throw new Error("Nhiệt độ nhỏ nhất là -273°C!");
     }
 }
-
 
 Temperature.prototype.switchToFahrenheit = function () {
     return this.celsius * 1.8 + 32;
@@ -29,7 +27,6 @@ function showResult() {
         document.getElementById("resultFirst").textContent = `Chuyển °C sang °F là ${temperature.switchToFahrenheit()}°F.`;
         document.getElementById("resultSecond").textContent = `Chuyển °C sang °K là ${temperature.switchToKelvin()}°K.`;
     } catch (error) {
-        document.getElementById("resultFirst").textContent = "";
-        document.getElementById("resultSecond").textContent = "";
+        alert(error.message);
     }
 }
