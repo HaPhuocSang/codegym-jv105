@@ -3,11 +3,7 @@ function checkInteger(number) {
 }
 
 function checkForPositiveInteger(number) {
-    let result = false;
-    if (number > 0) {
-        result = true;
-    }
-    return result;
+    return number > 0;
 }
 
 function showResult() {
