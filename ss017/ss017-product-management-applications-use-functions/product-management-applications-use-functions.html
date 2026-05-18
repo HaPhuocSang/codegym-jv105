@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <link rel="stylesheet" href="product-management-applications-use-functions.css">
+</head>
+<body>
+<div class="container">
+    <form>
+        <label for="productName">Add New Product</label>
+        <div class="form-product">
+            <input type="text" id="productName" placeholder="New Product">
+            <button type="button" onclick="addProduct()">Add</button>
+        </div>
+    </form>
+    <h2>Display All Product</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Product Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+    </table>
+</div>
+<script src="product-management-applications-use-functions.js"></script>
+</body>
+</html>
