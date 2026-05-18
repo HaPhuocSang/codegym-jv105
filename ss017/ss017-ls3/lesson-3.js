@@ -1,11 +1,7 @@
 function calculateFactorial(number) {
     let result = 1;
-    if (!number || number === 1) {
-        result = 1;
-    } else {
-        for (let i = 1; i <= number; i++) {
-            result *= i;
-        }
+    for (let i = 1; i <= number; i++) {
+        result *= i;
     }
     return result;
 }
