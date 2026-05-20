@@ -26,8 +26,8 @@ class SwitchButton {
     }
 
     connectToLamp(lamp) {
-        if (!this.lamp.includes(lamp)) {
-            this.lamp.push(lamp);
+        if (!this.lamp.includes(lamp.name)) {
+            this.lamp.push(lamp.name);
             return "Đã kết nối!";
         }
         return `${lamp.name} đã được kết nối với công tắc!`;
