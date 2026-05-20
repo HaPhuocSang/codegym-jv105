@@ -10,12 +10,12 @@ class ElectricLamp {
 
     turnOn() {
         this.status = true;
-        return "Đèn đã được bật!";
+        return `${this.name}: Đèn đã được bật!`;
     }
 
     turnOff() {
         this.status = false;
-        return "Đèn đã được tắt!"
+        return `${this.name}: Đèn đã được tắt!`;
     }
 }
 
@@ -26,8 +26,8 @@ class SwitchButton {
     }
 
     connectToLamp(lamp) {
-        if (!this.lamp.includes(lamp.name)) {
-            this.lamp.push(lamp.name);
+        if (!this.lamp.includes(lamp)) {
+            this.lamp.push(lamp);
             return "Đã kết nối!";
         }
         return `${lamp.name} đã được kết nối với công tắc!`;
@@ -46,7 +46,11 @@ class SwitchButton {
             return "Đèn chưa được kết nối";
         }
         this.status = true;
-        return this.lamp[0].turnOn();
+        let result = [];
+        for (let i = 0; i < this.lamp.length; i++) {
+            result.push(this.lamp[i].turnOn());
+        }
+        return result.join("\n");
     }
 
     switchOff() {
@@ -54,7 +58,11 @@ class SwitchButton {
             return "Đèn chưa được kết nối";
         }
         this.status = false;
-        return this.lamp[0].turnOff();
+        let result = [];
+        for (let i = 0; i < this.lamp.length; i++) {
+            result.push(this.lamp[i].turnOff());
+        }
+        return result.join("\n");
     }
 }
 
