@@ -1,9 +1,7 @@
 function sumOddFiveThousand() {
     let sum = 0;
-    for (let i = 1; i <= 5000; i++) {
-        if (i % 2) {
-            sum += i;
-        }
+    for (let i = 1; i <= 5000; i += 2) {
+        sum += i;
     }
     return sum;
 }

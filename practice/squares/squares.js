@@ -1,8 +1,5 @@
 function squareVal(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = Math.pow(arr[i], 2);
-    }
-    return arr;
+    return arr.map((product) => Math.pow(product, 2));
 }
 
 let arr = [1,5,10, -2];

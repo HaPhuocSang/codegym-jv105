@@ -1,9 +1,7 @@
 function oddNumbers() {
     let arr = [];
-    for (let i = 1; i <= 50; i++) {
-        if ((i % 2)) {
-            arr.push(i);
-        }
+    for (let i = 1; i <= 50; i += 2) {
+        arr.push(i);
     }
     return arr;
 }
