@@ -52,13 +52,12 @@ class Human {
     }
 
     eatApple(apple, human) {
-        if (!apple.isEmpty()) {
-            this.weight++;
-            apple.decrease();
-            return `${this.name}: đã ăn táo! ${human.name} hãy ăn đi!`;
-        } else {
+        if (apple.isEmpty()) {
             return `${this.name}: Táo đã ăn hết! Chúng ta hãy rời đi!`
         }
+        this.weight++;
+        apple.decrease();
+        return `${this.name}: đã ăn táo! ${human.name} hãy ăn đi!`;
     }
 
     setGender(gender) {
