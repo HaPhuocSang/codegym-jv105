@@ -14,7 +14,7 @@ function showResult() {
     let firstTriangleSide = Number(document.getElementById("firstTriangleSide").value);
     let secondTriangleSide = Number(document.getElementById("secondTriangleSide").value);
     let thirdTriangleSide = Number(document.getElementById("thirdTriangleSide").value);
-    if (!checkNumber(firstTriangleSide) || !checkNumber(secondTriangleSide) || !checkNumber(thirdTriangleSide) || !checkNumber(thirdTriangleSide)) {
+    if (!checkNumber(firstTriangleSide) || !checkNumber(secondTriangleSide) || !checkNumber(thirdTriangleSide)) {
         alert("Cạnh tam giác không được là số âm và không được để trống!");
         return;
     }
