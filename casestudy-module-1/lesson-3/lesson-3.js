@@ -11,6 +11,20 @@ function checkForArraySymmetry(arr) {
     return true;
 }
 
+function validateNumber(num,i) {
+    do {
+        num = prompt(`Nhập số thứ ${i}: `);
+        if (num === null || !num.trim()) {
+            alert("Phần tử không được để rỗng!");
+        }
+        if (isNaN(Number(num))) {
+            alert("Phần tử phải là số!");
+        }
+    } while (num === null || !num.trim() || isNaN(Number(num)));
+
+    return Number(num);
+}
+
 function showResult() {
     let lengthArray = Number(document.getElementById("lengthArray").value);
     if (isNaN(lengthArray) || lengthArray < 2 || !Number.isInteger(lengthArray)) {
@@ -20,16 +34,7 @@ function showResult() {
     let numberArray = [];
     for (let i = 1; i <= lengthArray; i++) {
         let num;
-        do {
-            num = prompt(`Nhập số thứ ${i}: `);
-            if (num === null || !num.trim()) {
-                alert("Phần tử không được để rỗng!");
-            }
-            if (isNaN(Number(num))) {
-                alert("Phần tử phải là số!");
-            }
-        } while (num === null || !num.trim() || isNaN(Number(num)));
-        numberArray.push(Number(num));
+        numberArray.push(validateNumber(Number(num),i));
     }
     document.getElementById("result").textContent = checkForArraySymmetry(numberArray) ? `[${numberArray.join(", ")}] là mảng đối xứng!` : `[${numberArray.join(", ")}] không phải là mảng đối xứng!`;
 }
