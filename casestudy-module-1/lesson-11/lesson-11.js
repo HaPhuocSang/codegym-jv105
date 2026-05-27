@@ -78,55 +78,80 @@ function checkBirthday(date) {
     );
 }
 
+function inputValidate(message, validateFn) {
+    let value;
+    do {
+        value = prompt(message);
+        if (value === null) {
+            return null;
+        }
+        value = value.trim();
+
+        if (!validateFn(value)) {
+            alert("Giá trị không hợp lệ!");
+        }
+
+    } while (!validateFn(value));
+    return value;
+}
+
+function validateStudentId(id) {
+    return validateId(id) && validateUniqueId(id);
+}
+
+function validateId(id) {
+    return checkId(id);
+}
+
+function validateUniqueId(id) {
+    return !studentManager.students.some(s => s.id === id);
+}
+
+function validateName(name) {
+    return name.length > 0 && name.length <= 50;
+}
+
+function validateClass(className) {
+    return className.length > 0;
+}
+
+function validateEmail(email) {
+    return email.length > 0;
+}
+
+function validateBirthday(date) {
+    return checkBirthday(date);
+}
+
+function validateModule(module) {
+    return Number.isInteger(module) && module >= 1 && module <= 6;
+}
+
 function addStudent() {
-    let id;
-    do {
-        id = (prompt("Nhập mã HV:")).trim();
-        if (!checkId(id)) {
-            alert("Mã phải dạng HV-XXXX(X là số): ");
-        }
-        if (studentManager.students.find(student => student.id === id)) {
-            alert("Mã học viên đã tồn tại");
-        }
-    } while (!checkId(id) || studentManager.students.find(student => student.id === id));
-    let name;
-    do {
-        name = (prompt("Nhập tên:")).trim();
-        if (!name.length) {
-            alert("Tên không được để trống!");
-        }
-        if (name.length > 50) {
-            alert("Tên tối đa 50 ký tự");
-        }
-    } while (name.length > 50 || !name.length);
-    let className;
-    do {
-        className = (prompt("Nhập lớp:")).trim();
-        if (!className.length) {
-            alert("Tên lớp không được để trống!");
-        }
-    } while (!className.length);
-    let email;
-    do {
-        email = prompt("Nhập email:");
-        if (!email.length) {
-            alert("Email không được để trống!");
-        }
-    } while (!email.length);
-    let birthday;
-    do {
-        birthday = prompt("Nhập ngày sinh dd/mm/yyyy:");
-        if (!checkBirthday(birthday)) {
-            alert("Sai định dạng ngày");
-        }
-    } while (!checkBirthday(birthday));
-    let module;
-    do {
-        module = Number(prompt("Nhập module:"));
-        if (!Number.isInteger(module) || module < 1 || module > 6) {
-            alert("Module từ 1 -> 6");
-        }
-    } while (!Number.isInteger(module) || module < 1 || module > 6);
+    const id = inputValidate("Nhập mã HV:", validateStudentId);
+    if (id === null) {
+        return;
+    }
+    const name = inputValidate("Nhập tên:", validateName);
+    if (name === null) {
+        return;
+    }
+    const className = inputValidate("Nhập tên lớp học:", validateClass);
+    if (className === null) {
+        return;
+    }
+    const email = inputValidate("Nhập email:", validateEmail);
+    if (email === null) {
+        return;
+    }
+    const birthday = inputValidate("Nhập ngày sinh dd/mm/yyyy:", validateBirthday);
+    if (birthday === null) {
+        return;
+    }
+    let module = inputValidate("Nhập module (1-6):", (v) => validateModule(Number(v)));
+    if (module === null) {
+        return;
+    }
     let student = new Student(id, name, className, email, birthday, module);
     studentManager.add(student);
     studentManager.display();
@@ -140,44 +165,26 @@ function editStudent() {
         alert("Mã học viên không tồn tại");
         return;
     }
-    let newName;
-    do {
-        newName = (prompt("Nhập tên mới:")).trim();
-        if (!newName.length) {
-            alert("Tên không được để trống!");
-        }
-        if (newName.length > 50) {
-            alert("Tên tối đa 50 ký tự");
-        }
-    } while (newName.length > 50 || !newName.length);
-    let newClassName;
-    do {
-        newClassName = (prompt("Nhập lớp mới:")).trim();
-        if (!newClassName.length) {
-            alert("Tên lớp không được để trống!");
-        }
-    } while (!newClassName.length);
-    let newEmail;
-    do {
-        newEmail = prompt("Nhập email mới:");
-        if (!newEmail.length) {
-            alert("Email không được để trống!");
-        }
-    } while (!newEmail.length);
-    let newBirthday;
-    do {
-        newBirthday = prompt("Nhập ngày sinh dd/mm/yyyy mới:");
-        if (!checkBirthday(newBirthday)) {
-            alert("Sai định dạng ngày");
-        }
-    } while (!checkBirthday(newBirthday));
-    let newModule;
-    do {
-        newModule = Number(prompt("Nhập module mới:"));
-        if (!Number.isInteger(newModule) || newModule < 1 || newModule > 6) {
-            alert("Module từ 1 -> 6");
-        }
-    } while (!Number.isInteger(newModule) || newModule < 1 || newModule > 6);
+    const newName = inputValidate("Nhập tên mới:", validateName);
+    if (newName === null) {
+        return;
+    }
+    let newClassName = inputValidate("Nhập tên lớp học:", validateClass);
+    if (newClassName === null) {
+        return;
+    }
+    let newEmail = inputValidate("Nhập email mới:", validateEmail);
+    if (newEmail === null) {
+        return;
+    }
+    let newBirthday = inputValidate("Nhập ngày sinh dd/mm/yyyy:", validateBirthday);
+    if (newBirthday === null) {
+        return;
+    }
+    let newModule = inputValidate("Nhập module (1-6):", (v) => validateModule(Number(v)));
+    if (newModule === null) {
+        return;
+    }
     let student = new Student(id, newName, newClassName, newEmail, newBirthday, newModule);
     studentManager.edit(index, student);
     studentManager.display();
