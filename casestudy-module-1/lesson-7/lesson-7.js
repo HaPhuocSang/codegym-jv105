@@ -21,22 +21,16 @@ function checkArray() {
         alert("Mảng hiện tại chưa có phần tử nào!");
         return;
     }
-    let hasNumber = false;
-    let hasString = false;
-    for (let i = 0; i < arrayOfCharacters.length; i++) {
-        if (!(Number.isNaN(Number(arrayOfCharacters[i])))) {
-            hasNumber = true;
-        } else {
-            hasString = true;
-        }
-    }
+    let regexNumber = /^-?\d+(\.\d+)?$/;
+    let hasNumber = arrayOfCharacters.some(item => regexNumber.test(item.trim()));
+    let hasString = arrayOfCharacters.some(item => !regexNumber.test(item.trim()));
     let result;
-    if (hasNumber && hasString) {
-        result = -1;
-    } else if (hasNumber) {
+    if (hasNumber && !hasString) {
         result = 1;
-    } else {
+    } else if (!hasNumber && hasString) {
         result = 0;
+    } else {
+        result = -1;
     }
     document.getElementById("resultSecond").textContent = `${result}`;
 }
