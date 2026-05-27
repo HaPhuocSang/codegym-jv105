@@ -33,14 +33,6 @@ function checkArray() {
         alert("Mảng hiện tại chưa có phần tử nào!");
         return;
     }
-    let hasPrimeNumber = false;
-    let noPrimeNumber = false;
-    for (let i = 0; i < integerArray.length; i++) {
-        if (isPrime(integerArray[i])) {
-            hasPrimeNumber = true;
-        } else {
-            noPrimeNumber = true;
-        }
-    }
-    document.getElementById("resultSecond").textContent = hasPrimeNumber && !noPrimeNumber ? "TRUE" : "FALSE";
+    let hasPrimeNumber = integerArray.every(item => isPrime(item));
+    document.getElementById("resultSecond").textContent = hasPrimeNumber ? "TRUE" : "FALSE";
 }
