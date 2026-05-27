@@ -1,9 +1,10 @@
 const vowels = ["a", "e", "i", "o", "u"];
 
 function checkString(str) {
+    str = str.toLowerCase();
     let result = [];
     for (let i = 0; i < str.length; i++) {
-        if (!result.includes(str[i].toLowerCase()) && vowels.includes(str[i].toLowerCase())) {
+        if (!result.includes(str[i]) && vowels.includes(str[i])) {
             result.push(str[i].toLowerCase());
         }
     }
