@@ -15,8 +15,9 @@ function checkArray(arr) {
 }
 
 function showResult() {
-    let lengthArray = Number(document.getElementById("lengthArray").value);
+    let lengthArray;
     do {
+        lengthArray = Number(document.getElementById("lengthArray").value);
         if (isNaN(lengthArray) || lengthArray <= 0 || lengthArray > 20) {
             alert("Mảng có độ dài từ 1 đến 20!");
         }
