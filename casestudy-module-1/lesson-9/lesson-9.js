@@ -8,8 +8,8 @@ function checkArray(arr) {
 }
 
 function showResult() {
-    let lengthArray = (document.getElementById("lengthArray").value).trim();
-    if (!lengthArray.length || Number(lengthArray) <= 0 || Number(lengthArray) % 2 || !Number.isInteger(Number(lengthArray))) {
+    let lengthArray = Number((document.getElementById("lengthArray").value).trim());
+    if (lengthArray <= 0 || lengthArray % 2 !== 0 || !Number.isInteger(lengthArray)) {
         alert("Giá trị nhập vào không hợp lệ!");
         return;
     }
