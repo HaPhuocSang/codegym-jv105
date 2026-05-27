@@ -20,22 +20,15 @@ function checkArray() {
         alert("Mảng hiện tại chưa có phần tử nào!");
         return;
     }
-    let hasEven = false;
-    let hasOdd = false;
-    for (let i = 0; i < integerArray.length; i++) {
-        if (!(integerArray[i] % 2)) {
-            hasEven = true;
-        } else {
-            hasOdd = true;
-        }
-    }
-    let result;
-    if (hasEven && hasOdd) {
-        result = -1;
-    } else if (hasEven) {
+    const hasEven = integerArray.some(n => n % 2 === 0);
+    const hasOdd = integerArray.some(n => n % 2 !== 0);
+    let result; 
+    if (hasEven && !hasOdd) {
         result = 1;
-    } else {
+    } else if (!hasEven && hasOdd) {
         result = 0;
+    } else {
+        result = -1;
     }
     document.getElementById("resultSecond").textContent = `${result}`;
 }
