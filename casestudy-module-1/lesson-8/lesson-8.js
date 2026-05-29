@@ -20,7 +20,8 @@ function isPrime(n) {
     if (n <= 1) {
         return false;
     }
-    for (let i = 2; i <= Math.sqrt(n); i++) {
+    let limit = Math.sqrt(n);
+    for (let i = 2; i <= limit; i++) {
         if (!(n % i)) {
             return false;
         }
