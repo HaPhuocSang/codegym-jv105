@@ -15,16 +15,11 @@ function checkArray(arr) {
 }
 
 function showResult() {
-    let lengthArray;
-    do {
-        lengthArray = Number(document.getElementById("lengthArray").value);
-        if (isNaN(lengthArray) || lengthArray <= 0 || lengthArray > 20) {
-            alert("Mảng có độ dài từ 1 đến 20!");
-        }
-        if (!Number.isInteger(lengthArray)) {
-            alert("Độ dài là số nguyên dương!");
-        }
-    } while (isNaN(lengthArray) || lengthArray <= 0 || lengthArray > 20 || !Number.isInteger(lengthArray));
+    let lengthArray = Number(document.getElementById("lengthArray").value);
+    if (isNaN(lengthArray) || lengthArray <= 0 || lengthArray > 20 || !Number.isInteger(lengthArray)) {
+        alert("GIá trị nhập vào không hợp lệ (là số nguyên có từ 1-20)!");
+        return;
+    }
     let numberArray = [];
     for (let i = 1; i <= lengthArray; i++) {
         let num;
